@@ -1,4 +1,4 @@
-﻿namespace nakagawa_practice01
+﻿namespace practice01
 {
     partial class Form1
     {
