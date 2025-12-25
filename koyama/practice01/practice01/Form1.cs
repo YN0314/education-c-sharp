@@ -30,7 +30,7 @@ namespace WindowsFormsApppractice01
             Random rnd = new Random();
             Hand randomHand = (Hand)rnd.Next(3);
 
-            if(randomHand == Hand.stone)
+            if (randomHand == Hand.stone)
             {
                 textBox1.Text = "グー";
                 MessageBox.Show("あいこ", "勝敗");
