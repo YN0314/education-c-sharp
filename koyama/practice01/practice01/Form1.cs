@@ -18,27 +18,30 @@ namespace WindowsFormsApppractice01
             InitializeComponent();
         }
 
-        int stone = 0;
-        int scissors = 1;
-        int paper = 2;
+        public enum Hand
+        {
+            stone = 0,
+            scissors = 1,
+            paper = 2,
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            int randomnumber = rnd.Next(3);
+            Hand randomHand = (Hand)rnd.Next(3);
 
-            if(randomnumber == stone)
+            if(randomHand == Hand.stone)
             {
                 textBox1.Text = "グー";
                 MessageBox.Show("あいこ", "勝敗");
             }
 
-            else if (randomnumber == scissors)
+            else if (randomHand == Hand.scissors)
             {
                 textBox1.Text = "チョキ";
                 MessageBox.Show("勝ち", "勝敗");
             }
-            else if (randomnumber == paper)
+            else if (randomHand == Hand.paper)
             {
                 textBox1.Text = "パー";
                 MessageBox.Show("負け", "勝敗");
@@ -48,20 +51,20 @@ namespace WindowsFormsApppractice01
         private void button2_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            int randomnumber = rnd.Next(3);
+            Hand randomHand = (Hand)rnd.Next(3);
 
-            if (randomnumber == scissors)
+            if (randomHand == Hand.scissors)
             {
                 textBox1.Text = "チョキ";
                 MessageBox.Show("あいこ", "勝敗");
             }
 
-            else if (randomnumber == paper)
+            else if (randomHand == Hand.paper)
             {
                 textBox1.Text = "パー";
                 MessageBox.Show("勝ち", "勝敗");
             }
-            else if (randomnumber == stone)
+            else if (randomHand == Hand.stone)
             {
                 textBox1.Text = "グー";
                 MessageBox.Show("負け", "勝敗");
@@ -71,20 +74,20 @@ namespace WindowsFormsApppractice01
         private void button3_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            int randomnumber = rnd.Next(3);
+            Hand randomHand = (Hand)rnd.Next(3);
 
-            if (randomnumber == paper)
+            if (randomHand == Hand.paper)
             {
                 textBox1.Text = "パー";
                 MessageBox.Show("あいこ", "勝敗");
             }
 
-            else if (randomnumber == stone)
+            else if (randomHand == Hand.stone)
             {
                 textBox1.Text = "グー";
                 MessageBox.Show("勝ち", "勝敗");
             }
-            else if (randomnumber == scissors)
+            else if (randomHand == Hand.scissors)
             {
                 textBox1.Text = "チョキ";
                 MessageBox.Show("負け", "勝敗");
