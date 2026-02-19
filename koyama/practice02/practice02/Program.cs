@@ -16,7 +16,10 @@ namespace practice02
                 {
                     Console.WriteLine($"{i}アホ");
                 }
-            
+                else
+                {
+                    Console.WriteLine(i);
+                }
             }
             Console.ReadLine();
         }
